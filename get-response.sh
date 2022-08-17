@@ -1,8 +1,15 @@
 #!/bin/bash
+url=$1
+
+if [ -z "$url" ]; then
+	echo "arguments not found"
+	exit 1
+fi
+
+
 directory_tugas="tugas"
 file_tugas="tugas1.txt"
 file_tugas_path="$directory_tugas/$file_tugas"
-url=$1
 
 if ! [ -f $file_tugas_path ]; then
 	mkdir $directory_tugas
